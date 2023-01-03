@@ -1,0 +1,19 @@
+.cadreTimer {
+    @include flex;
+    @include flexCenter;
+    color: white;
+
+    &_box{
+        text-align: center;
+        margin: 10px;
+
+        p{
+            font-size: 45px;
+            margin: 0;
+        }
+        span{
+            font-size: 20px;
+        }
+    }
+    
+}

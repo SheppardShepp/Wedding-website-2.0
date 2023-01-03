@@ -1,0 +1,12 @@
+@import "./utils/mixin.scss";
+
+@import "./utils/variable.scss";
+@import "./bases/police.scss";
+
+
+@import "./component/header";
+@import './component/footer';
+@import "./component/timer";
+
+@import "./app";
+@import "./pages/home";
