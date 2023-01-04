@@ -6,7 +6,7 @@ const Timer1 = () => {
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
 
-  const deadline = "27 may 2023 16:30:00";
+  const deadline = "27 may 2023 16:30:00 UTC+1";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
@@ -24,22 +24,46 @@ const Timer1 = () => {
   }, []);
 
   return (
-    <section className="cadreTimer" role="timer">
-      <div className="cadreTimer_box">
-        <p id="day">{days < 10 ? "0" + days : days}</p>
-        <span>Jours</span>
+    <section className="cadre" role="timer">
+      <div className="cadre_day">
+        <p id="day" className="cadre_day_Number">
+          {days < 10 ? "0" + days : days}
+        </p>
+        <p className="cadre_day_Text">
+          {days < 2 ? "jour restant" : "jours restants"}
+        </p>
       </div>
-      <div className="cadreTimer_box">
-        <p id="hour">{hours < 10 ? "0" + hours : hours}</p>
-        <span>Heures</span>
+      <div className="cadre_timer">
+        <div className="cadre_timer_box">
+          <p id="hour" className="cadre_timer_box_number">
+            {hours < 10 ? "0" + hours : hours}
+          </p>
+        </div>
+        <p className="cadre_timer_point">:</p>
+        <div className="cadre_timer_box">
+          <p id="minute" className="cadre_timer_box_number">
+            {minutes < 10 ? "0" + minutes : minutes}
+          </p>
+        </div>
+        <p className="cadre_timer_point">:</p>
+        <div className="cadre_timer_box">
+          <p id="second" className="cadre_timer_box_number">
+            {seconds < 10 ? "0" + seconds : seconds}
+          </p>
+        </div>
       </div>
-      <div className="cadreTimer_box">
-        <p id="minute">{minutes < 10 ? "0" + minutes : minutes}</p>
-        <span>Minutes</span>
-      </div>
-      <div className="cadreTimer_box">
-        <p id="second">{seconds < 10 ? "0" + seconds : seconds}</p>
-        <span>Secondes</span>
+      <div className="cadre_timer">
+        <div className="cadre_timer_box">
+          <p className="cadre_timer_box_text">Heures</p>
+        </div>
+        <div className="cadre_timer_box"></div>
+        <div className="cadre_timer_box">
+          <p className="cadre_timer_box_text">Minutes</p>
+        </div>
+        <div className="cadre_timer_box"></div>
+        <div className="cadre_timer_box">
+          <p className="cadre_timer_box_text">Secondes</p>
+        </div>
       </div>
     </section>
   );

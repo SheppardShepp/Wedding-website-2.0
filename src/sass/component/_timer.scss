@@ -1,19 +1,96 @@
-.cadreTimer {
-    @include flex;
-    @include flexCenter;
+.cadre {
+    @include flexColonne;
     color: white;
 
-    &_box{
-        text-align: center;
-        margin: 10px;
-
-        p{
-            font-size: 45px;
-            margin: 0;
+    &_day{
+        @include flexCenter;
+        margin: 0 0 20px 0;
+        @media (max-width: 550px){
+            width: 210px;              
         }
-        span{
-            font-size: 20px;
+
+        &_Number{
+            font-size: 80px;
+            margin: 0 20px 0 0;
+            font-family: $texte;
+            @media (max-width: 550px) {
+                font-size: 38px;               
+            }
+        }
+    
+        &_Text{
+            padding-top: 20px;
+            font-size: 56px;
+            margin: 0;
+            font-family: $texte;
+            @media (max-width: 550px) {
+                font-size: 22px;
+                padding-top: 12px;
+            }
         }
     }
+        
+    &_timer{
+        @include flexBetween;
+        width: 300px;
+        height: 75px;
+        @media (max-width: 550px){
+            width: 170px;
+            height: 40px;
+        }
+
+        &_box{
+            width: 80px;
+            @media (max-width: 550px){
+                width: 40px;
+            }
     
+            &_number{
+                text-align: center;
+                font-size: 45px;
+                margin: 0;
+                font-family: $texte;
+                color: $colorPolice;
+                background-color: white;
+                height: 76px;
+                border-radius: 25px;
+                @media (max-width: 550px){
+                    border-radius: 15px;
+                    height: 37px;
+                    font-size: 22px;
+                }
+            }
+
+            &_text{
+                font-size: 20px;
+                font-family: $texte;
+                @media (max-width: 550px){
+                    font-size: 11px;
+                }
+            }
+        }
+
+        &_point{
+            animation-duration: 1.5s;
+            animation-name: clignoter;
+            animation-iteration-count: infinite;
+            transition: none;
+            font-size: 45px;
+            @media (max-width: 550px){
+                font-size: 22px;
+            }
+              
+            @keyframes clignoter {
+              0% {
+                opacity: 1;
+              }      
+              50% {
+                opacity: 0;
+              }      
+              100% {
+                opacity: 1;
+              }
+            }
+        }
+    }        
 }
