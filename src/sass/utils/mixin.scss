@@ -2,20 +2,27 @@
     display: flex;
 }
 
-@mixin flexCenter{
+@mixin flexCenter{    
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-@mixin flexColonne {
+@mixin flexColonne{
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 @mixin flexBetween {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-@mixin flexAround {
+@mixin flexAround {    
+    display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
