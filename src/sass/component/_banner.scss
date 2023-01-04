@@ -51,19 +51,22 @@
                 font-size: 30px;
             }
         }
+
+        .button{
+            border-radius: 25px;
+            width: 150px;
+            height: 60px;
+            background-color: white;
+            text-decoration: none;
+            p{
+                text-align: center;
+                color: #020d52;
+                font-family: "Playfair Display";
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
     }
 }
-.button{
-    border-radius: 25px;
-    width: 150px;
-    height: 60px;
-    background-color: white;
-    text-decoration: none;
-    p{
-        text-align: center;
-        color: #020d52;
-        font-family: "Playfair Display";
-        font-size: 18px;
-        font-weight: bold;
-    }
-}
+
+
