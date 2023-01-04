@@ -19,7 +19,7 @@ function Home() {
         <Banner
           title="Festivité au domaine de l'étoile de forges"
           addClass02
-          origin="Separation"
+          origin="Domaine"
         />
         <section className="bloc">
           <Domaine />
