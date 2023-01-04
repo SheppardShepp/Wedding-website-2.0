@@ -3,7 +3,7 @@ import Timer from "../components/Timer";
 import { Link } from "react-router-dom";
 
 function Banner(props) {
-  let addClass = "banner";
+  let addClass = "banner_Img";
   if (props.addClass) {
     addClass += " imgTimer";
   } else if (props.addClass02) {
@@ -14,26 +14,34 @@ function Banner(props) {
 
   if (props.origin === "Home") {
     return (
-      <section className="testZIndex">
+      <section className="banner">
         <div className={addClass}></div>
         <div className="banner_black"></div>
-        <div className="banner_compeur">
-          <h2>{props.title}</h2>
-
+        <div className="banner_timer">
           <Timer />
-          <Link to="/Contact" className="button">
-            <p>Contact</p>
+        </div>
+      </section>
+    );
+  } else if (props.origin === "Domaine") {
+    return (
+      <section className="banner">
+        <div className={addClass}></div>
+        <div className="banner_black"></div>
+        <div className="banner_timer">
+          <h1>{props.title}</h1>
+          <Link to="/Confirmation" className="button">
+            <p>Confirmation</p>
           </Link>
         </div>
       </section>
     );
   } else if (props.origin === "Separation") {
     return (
-      <section className="testZIndex">
+      <section className="banner">
         <div className={addClass}></div>
         <div className="banner_black"></div>
-        <div className="banner_compeur">
-          <h2>{props.title}</h2>
+        <div className="banner_timer">
+          <h1>{props.title}</h1>
         </div>
       </section>
     );
