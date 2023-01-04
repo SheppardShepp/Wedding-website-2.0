@@ -1,13 +1,17 @@
 import React from "react";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Contact() {
   return (
-    <div>
+    <>
       <Header origin="home" />
-      <h1>Bienvenue sur la page de contact</h1>
-    </div>
+      <main>
+        <h1>Bienvenue sur la page de contact</h1>
+      </main>
+      <Footer />
+    </>
   );
 }
 
