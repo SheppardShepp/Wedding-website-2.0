@@ -1,0 +1,34 @@
+// ------------- la page 404 ------------
+.pageError {
+    @include flexColonne;
+
+    // ------------- le 404 --------------
+    p {
+        color: $colorPolice;
+        font-family: $texte;
+        font-size: 240px;
+        font-weight: 700;
+        margin: 0;
+        width: 60%;
+        height: 330px;
+        text-align: center;
+        @media (max-width: 650px) {
+            font-size: 125px;
+            height: 150px;
+        }
+    }
+
+    // ----------- titre sous le 404 ----------
+    h1 {
+        color: $colorPolice;
+        font-family: $texte;
+        font-weight: 500;
+        font-size: 36px;
+        text-align: center;
+        margin: 35px 0 70px 0;
+        @media (max-width: 650px) {
+            font-size: 18px;
+            width: 75%;
+        }
+    }
+}
