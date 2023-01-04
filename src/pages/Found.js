@@ -1,24 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 //fonction qui retourne la page 404
 function Found() {
   return (
-    <section>
+    <>
       <Header origin="about" />
-      <div>
+      <main className="pageError">
         <p>404</p>
         <h1>Oups! La page que vous demandez n'existe pas.</h1>
-        <div>
-          <Link to="/">Retourner sur la page d’accueil</Link>
-        </div>
-        <div>
-          <Link to="/Contact">Retourner sur la page Contact</Link>
-        </div>
-      </div>
-    </section>
+      </main>
+      <Footer />
+    </>
   );
 }
 
