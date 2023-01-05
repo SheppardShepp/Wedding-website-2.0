@@ -14,9 +14,8 @@
 //-------------------- section mairie -------------------------
 
 .bloc{
-    border: 3px solid #0679CA;
-    border-radius: 15px; 
-    margin: 50px;
+    // border: 3px solid #0679CA;
+    // border-radius: 15px; 
+    padding: 28px;
     height: 400px;
-    @include flexCenter;
 }

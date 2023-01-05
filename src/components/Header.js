@@ -5,7 +5,7 @@ function Header(props) {
   if (props.origin === "home") {
     return (
       <header>
-        <p>Mariage de Nadège et Damien</p>
+        <h1>Mariage de Nadège et Damien</h1>
         <div className="blocIntial">
           <div className="blocIntial_position"></div>
         </div>

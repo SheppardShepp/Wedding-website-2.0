@@ -1,7 +1,7 @@
 header{
     position: relative;
     @include flexBetween;
-    padding: 0 5% 0 5%;
+    padding: 0 28px;
     color: $colorPolice;
     height: 150px;
     @media (max-width: 1080px) {
@@ -11,13 +11,14 @@ header{
         height: 90px;
     }
     
-    p{
+    h1{
         position: relative;
         z-index: 2;
         margin: 0;
         width: 45%;
         font-family: $texte;
-        font-size: 30px;
+        font-size: 35px;
+        font-weight: normal;
         @media (max-width: 1080px) {
             @include flexCenter;
             width: 250px;
@@ -60,66 +61,5 @@ header{
                 height: 50px;
             }
         }
-    }
-
-    .menu{
-        position: relative;
-        z-index: 2;
-        @include flexCenter;
-
-        &_buttonToggle{
-            display: none;
-            @media (max-width: 1080px) {
-                display: block;
-            }
-
-            .menu-active{
-                position: absolute;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                text-align: end;
-                border: 3px solid $colorTheme;
-                background-color: $colorFond;
-                border-radius: 10px;
-                overflow: hidden;
-
-                span{
-                    border-bottom: 3px solid $colorTheme;
-                    width: 100%;
-                }
-
-                a{
-                    text-decoration: none;
-                    color: $colorPolice;
-                    font-family: $texte;
-                    font-size: 30px;
-                    padding: 0 10px;
-                    &:hover{
-                        background-color: $colorThemeHover;
-                    }
-                }
-            }
-            .menu-inactive{
-                display: none;
-            }
-        }
-
-        &_link{
-           
-            a{
-                text-decoration: none;
-                color: $colorPolice;
-                font-family: $texte;
-                font-size: 30px;
-                padding: 0 10px;
-                &:hover{
-                    border-bottom: 3px solid $colorTheme;
-                }
-            }
-            @media (max-width: 1080px) {
-                display: none;
-            }
-        }
-    }
+    }    
 }
