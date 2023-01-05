@@ -44,7 +44,7 @@
     
         h1{
             text-align: center;
-            color: white;
+            color: $colorFond;
             font-size: 45px;
             font-family: $texte;
             @media (max-width: 550px) {
@@ -56,14 +56,23 @@
             border-radius: 25px;
             width: 150px;
             height: 60px;
-            background-color: white;
+            background-color: $colorFond;
             text-decoration: none;
+            border: 2px solid $colorTheme;
+            overflow: hidden;
+
             p{
+                @include flexCenter;
                 text-align: center;
-                color: #020d52;
+                color: $colorPolice;
                 font-family: "Playfair Display";
                 font-size: 18px;
                 font-weight: bold;
+                height: 100%;
+                margin: 0;
+                &:hover{
+                    background-color: $colorThemeHover;
+                }
             }
         }
     }
