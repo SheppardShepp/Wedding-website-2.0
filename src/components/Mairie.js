@@ -1,10 +1,15 @@
 import React from "react";
+import Carousel from "./Carrousel";
+import Slider from "./slider";
 
-function Mairie() {
+import ImgMairie from "../data/librairie.json";
+import Sliders from "../data/librairieSlider.json";
+
+function Mairie(props) {
   return (
     <>
-      <h2>La Mairie de Cuy Saint Fiacre</h2>
-      <div class="intro">
+      <h2>{props.title}</h2>
+      <div className="intro">
         <p>
           Nous vous donnons donc rendez-vous pour notre passage devant la
           Mairesse de notre commune pour 16h30 le 27 mai 2023. Nous nous
@@ -20,6 +25,13 @@ function Mairie() {
           attentive au stationnement sur les trottoirs. Et accessoirement
           j'aimrerai faire bonne impression.
         </p>
+      </div>
+      <section className="carousel">
+        <Carousel pictures={ImgMairie.pictures} legend={ImgMairie.legends} />
+      </section>
+
+      <div className="lightbox">
+        <Slider datas={Sliders} />
       </div>
     </>
   );

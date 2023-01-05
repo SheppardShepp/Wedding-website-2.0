@@ -1,0 +1,81 @@
+// ------------- section carousel ------------
+.carousel{
+    position: relative;
+    max-width: 1440px;
+    width: 50%;
+    height: 415px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    @media (max-width: 650px) {
+        height: 255px;
+    }
+
+    // ------------- l'image de fond ------------
+    &_size{
+        position: absolute;
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+    z-index: 2;
+
+        @media (max-width: 650px) {
+            height: 255px;
+        }
+    }
+
+    // ------------- dégradé de fond ------------
+    &_backBlack{
+        position: absolute;
+        width: 100%;
+        height: 415px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        z-index: 3;
+        
+        @media (max-width: 650px) {
+            height: 255px;
+        }
+    }
+
+    // ------------- div position des chevrons ------------
+    &_chevron{
+        position: absolute;
+        @include flexBetween;
+        width: 100%;
+        height: 100%;
+        font-size: 54px;
+        color: $colorFond;
+        z-index: 4;
+
+        
+        // ------------- taille responsive des chevrons ------------
+        .chevron{
+            margin: 0 15px 0 15px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: .3s;
+            @media (max-width: 650px) {
+                font-size: 25px;
+            }
+            &:hover{
+
+                opacity: 1;
+            }
+        }
+    }
+
+    // ------------- div du compteur d'image ------------
+    &_compteur{
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 20px 0;
+        width: 100%;
+        color: $colorFond;
+        text-align: center;
+    z-index: 5;
+
+        @media (max-width: 650px) {
+            visibility: hidden;
+        }
+    } 
+}

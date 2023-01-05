@@ -14,7 +14,7 @@ function Home() {
       <main>
         <Banner title="Avant le passage à la mairie" addClass origin="Home" />
         <section className="bloc">
-          <Mairie />
+          <Mairie title="La Mairie de Cuy Saint Fiacre" />
         </section>
         <Banner
           title="Festivité au domaine de l'étoile de forges"
