@@ -29,8 +29,15 @@ function Banner(props) {
         <div className="banner_black"></div>
         <div className="banner_timer">
           <h1>{props.title}</h1>
+          <p className="banner_timer_text">
+            Afin de nous organiser avec les prestataires, nous aimerions, que
+            vous nous confirmiez votre présence ainsi que quelques autres
+            informations. <br />
+            Sois par téléphone ou sms, les reseau sociaux ou en cliquant sur le
+            bouton ci-dessous.
+          </p>
           <Link to="/Confirmation" className="button">
-            <p>Confirmation</p>
+            <p className="button_text">Confirmation</p>
           </Link>
         </div>
       </section>

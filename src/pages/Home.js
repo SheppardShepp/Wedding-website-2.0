@@ -3,9 +3,9 @@ import React from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Mairie from "../components/Mairie";
-import Domaine from "../components/Domaine";
-import Info from "../components/Info";
+import Mairie from "../Bloc information/Mairie";
+import Domaine from "../Bloc information/Domaine";
+import Info from "../Bloc information/Info";
 
 function Home() {
   return (
@@ -14,7 +14,11 @@ function Home() {
       <main>
         <Banner title="Avant le passage à la mairie" addClass origin="Home" />
         <section className="bloc">
-          <Mairie title="La Mairie de Cuy Saint Fiacre" />
+          <Mairie
+            title="La Mairie de Cuy Saint Fiacre"
+            titleH3="Les accès"
+            titleH4="Coordonée de la mairie"
+          />
         </section>
         <Banner
           title="Festivité au domaine de l'étoile de forges"
@@ -22,7 +26,7 @@ function Home() {
           origin="Domaine"
         />
         <section className="bloc">
-          <Domaine />
+          <Domaine title="Le Domaine de l'Étoile de Forges" />
         </section>
         <Banner title="Infos pratique" addClass03 origin="Separation" />
         <section className="bloc">

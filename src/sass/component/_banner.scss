@@ -52,6 +52,11 @@
             }
         }
 
+        &_text{
+            color: $colorTheme;
+            text-align: center;
+        }
+
         .button{
             border-radius: 25px;
             width: 150px;
@@ -61,7 +66,7 @@
             border: 2px solid $colorTheme;
             overflow: hidden;
 
-            p{
+            &_text{
                 @include flexCenter;
                 text-align: center;
                 color: $colorPolice;

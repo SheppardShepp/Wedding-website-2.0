@@ -19,13 +19,13 @@ function Carousel(props) {
     <>
       <img
         src={props.pictures[slid]}
-        className="carousel_size"
+        className="sectionCarousel_size"
         alt="Aperçue Logement"
       />
-      <div className="carousel_backBlack"></div>
+      <div className="sectionCarousel_backBlack"></div>
       {props.pictures.length !== 1 && (
         <>
-          <div className="carousel_chevron">
+          <div className="sectionCarousel_chevron">
             <FontAwesomeIcon
               icon={faChevronLeft}
               onClick={previousSlide}
@@ -37,7 +37,7 @@ function Carousel(props) {
               className="chevron"
             />
           </div>
-          <div className="carousel_compteur">
+          <div className="sectionCarousel_compteur">
             <p>{props.legend[slid]}</p>
             <p>
               {slid + 1}/{props.pictures.length}

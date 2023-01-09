@@ -1,9 +1,9 @@
 // ------------- section carousel ------------
-.carousel{
+.sectionCarousel{
     position: relative;
     max-width: 1440px;
     width: 50%;
-    height: 415px;
+    height: 100%;
     z-index: 1;
     overflow: hidden;
     border-radius: 10px;
@@ -77,5 +77,5 @@
         @media (max-width: 650px) {
             visibility: hidden;
         }
-    } 
+    }
 }
