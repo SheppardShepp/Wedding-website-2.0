@@ -1,175 +1,171 @@
-// import React from "react";
-// import { DatePicker } from 'antd';
+import React, { useState } from "react";
 
-// function Confirmation() {
-//   return (
-//     <>
-//       <Header origin="home" />
-//       <main>
-//         <h1>Bienvenue sur la page de confirmation</h1>
-//         <form action="post">
-//           <label for="lastName">Invité: </label>
-//           <input type="text" name="lastName" id="lastName" required />
-
-//           <label for="lastName">
-//             nombre de personne adulte (10 a 99 ans):{" "}
-//           </label>
-//           <input type="text" name="lastName" id="lastName" required />
-
-//           <label for="lastName">nombre d'enfant (3 a 10 ans): </label>
-//           <input type="text" name="lastName" id="lastName" required />
-//         </form>
-//       </main>
-//       <Footer />
-//     </>
-//   );
-// }
-
-// export default Confirmation;
-
-import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { Button, Form, Input, Select } from "antd";
 
+import { Button, Form, Input } from "antd";
 import { InputNumber } from "antd";
-const onChange = (value) => {
-  console.log("changed", value);
-};
+import { Select } from "antd";
 
-const { Option } = Select;
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-const App = () => {
+function Confirmation() {
+  const handleChange = (value) => {
+    console.log(value);
+  };
+
+  /* eslint-disable no-template-curly-in-string */
+  const validateMessages = {
+    required: "${label} is required!",
+    types: {
+      email: "${label} is not a valid email!",
+      number: "${label} is not a valid number!",
+    },
+    number: {
+      range: "${label} must be between ${min} and ${max}",
+    },
+  };
+  /* eslint-enable no-template-curly-in-string */
+
+  const onChange = (value) => {
+    console.log("changed", value);
+  };
   const [form] = Form.useForm();
-  const onGenderChange = (value) => {
-    switch (value) {
-      case "male":
-        form.setFieldsValue({
-          note: "Hi, man!",
-        });
-        return;
-      case "female":
-        form.setFieldsValue({
-          note: "Hi, lady!",
-        });
-        return;
-      case "other":
-        form.setFieldsValue({
-          note: "Hi there!",
-        });
-        break;
-      default:
-    }
+  const [formLayout, setFormLayout] = useState("horizontal");
+  const onFormLayoutChange = ({ layout }) => {
+    setFormLayout(layout);
   };
-  const onFinish = (values) => {
-    console.log(values);
-  };
-  const onReset = () => {
-    form.resetFields();
-  };
-  const onFill = () => {
-    form.setFieldsValue({
-      note: "Hello world!",
-      gender: "male",
-    });
-  };
+
+  const formItemLayout =
+    formLayout === "horizontal"
+      ? {
+          labelCol: {
+            span: 4,
+          },
+          wrapperCol: {
+            span: 14,
+          },
+        }
+      : null;
+  const buttonItemLayout =
+    formLayout === "horizontal"
+      ? {
+          wrapperCol: {
+            span: 14,
+            offset: 4,
+          },
+        }
+      : null;
+
   return (
     <>
       <Header origin="home" />
       <main>
-        <h1>Bienvenue sur la page de confirmation</h1>
+        <div className="space"></div>
+        <div className="title">
+          <h2>Bienvenue sur la page de confirmation</h2>
+          <p>
+            Afin de savoir qui va venir, pour pouvoir nous organiser avec les prestataires, nous
+            aimerions que vous nous confirmiez votre présence (ou absence) avec le nombre de
+            participant via ce bref formulaire. Pour tout autres détails, nous sommes évidemment
+            disponible par le formulaire de contact, par telephone ou réseau sociaux.
+          </p>
+        </div>
+        <div className="formulaire">
+          <Form
+            {...formItemLayout}
+            validateMessages={validateMessages}
+            layout={formLayout}
+            form={form}
+            size="large"
+            initialValues={{
+              layout: formLayout,
+            }}
+            onValuesChange={onFormLayoutChange}>
+            <Form.Item
+              name={["user", "name"]}
+              label="Invité"
+              className="formLabel"
+              rules={[
+                {
+                  required: true,
+                },
+              ]}>
+              <Input placeholder="Nom du/des invité(s)" />
+            </Form.Item>
 
-        <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-          <Form.Item
-            name="Invité"
-            label="Invité"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="gender"
-            label="Nombre d'adulte"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select
-              placeholder="Select a option and change input text above"
-              onChange={onGenderChange}
-              allowClear
-            >
-              <Option value="1">1</Option>
-              <Option value="2">2</Option>
-              <Option value="other">3</Option>
-            </Select>
-            <p>Nombre d'adulte:</p>
-            <InputNumber min={1} max={6} defaultValue={1} onChange={onChange} />
-          </Form.Item>
-          <div>
-            <p>Nombre d'adulte:</p>
-            <InputNumber min={1} max={6} defaultValue={1} onChange={onChange} />
-          </div>
-          <div>
-            <p>Nombre d'enfant:</p>
-            <InputNumber min={1} max={6} defaultValue={1} onChange={onChange} />
-          </div>
-          <Form.Item
-            noStyle
-            shouldUpdate={(prevValues, currentValues) =>
-              prevValues.gender !== currentValues.gender
-            }
-          >
-            {({ getFieldValue }) =>
-              getFieldValue("gender") === "other" ? (
-                <Form.Item
-                  name="customizeGender"
-                  label="Customize Gender"
-                  rules={[
-                    {
-                      required: true,
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              ) : null
-            }
-          </Form.Item>
-          <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
-              Submit
-            </Button>
-            <Button htmlType="button" onClick={onReset}>
-              Reset
-            </Button>
-            <Button type="link" htmlType="button" onClick={onFill}>
-              Fill form
-            </Button>
-          </Form.Item>
-        </Form>
+            <div className="call">
+              <div className="call-1">
+                <div className="call-1_bloc">
+                  <div className="call-1_bloc_text">
+                    <p>Nous seront </p>
+                    <span className="point">:</span>
+                  </div>
+                  <Select
+                    labelInValue
+                    defaultValue={{
+                      value: "Présent(s)",
+                      label: "Présent(s)",
+                    }}
+                    style={{
+                      width: 120,
+                    }}
+                    size="large"
+                    onChange={handleChange}
+                    options={[
+                      {
+                        value: "Présent(s)",
+                        label: "Présent(s)",
+                      },
+                      {
+                        value: "Absent(s)",
+                        label: "Absent(s)",
+                      },
+                    ]}
+                  />
+                </div>
+              </div>
+              <div className="InputNumber">
+                <div className="InputNumber_bloc">
+                  <div className="InputNumber_bloc_text">
+                    <p>Nombre d'adulte(s) ( 10 à 99 ans )</p>
+                    <span className="point">:</span>
+                  </div>
+                  <InputNumber
+                    min={1}
+                    max={10}
+                    size="large"
+                    defaultValue={0}
+                    onChange={onChange}
+                  />
+                </div>
+                <div className="InputNumber_bloc">
+                  <div className="InputNumber_bloc_text">
+                    <p>Nombre d'enfant(s) ( 3 à 10 ans )</p>
+                    <span className="point">:</span>
+                  </div>
+                  <InputNumber
+                    min={1}
+                    max={10}
+                    size="large"
+                    defaultValue={0}
+                    onChange={onChange}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <Form.Item {...buttonItemLayout}>
+              <Button
+                type="primary"
+                className="buttonCenter">
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
       </main>
       <Footer />
     </>
   );
-};
-export default App;
+}
+
+export default Confirmation;

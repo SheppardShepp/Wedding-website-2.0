@@ -1,0 +1,135 @@
+
+
+.formulaire{
+    @include flexCenter;
+    margin-top: 50px;
+    .point{
+        margin: 0 8px 0 8px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    form{
+        width: 60%;
+
+        .formLabel{
+            label{          
+                justify-content: end;    
+                color: $colorPolice;
+                font-size: 18px;
+                width: 100%;
+            }
+            
+            .ant-col{    
+                max-width: 70%;                    
+            }
+
+            .ant-col-4{
+                flex: none;
+            } 
+            
+
+            .ant-form-item-label{
+                text-align: start;
+                max-width: none;
+                width: 175px;
+            }
+        }
+
+        .call{
+            display: flex;
+            text-align: end;
+            flex-wrap: wrap;
+            margin: 0 0 24px 0;
+            color: $colorPolice;
+            font-size: 18px;
+
+            .call-1{
+                margin: 0 18px 24px 0;
+
+
+                &_bloc{
+                    display: flex;
+                    align-items: center;
+
+                    &_text{
+                        display: flex;
+                        width: 175px;
+        
+                        p{
+                            width: 156px;                    
+                            margin: 0 4px 0 0;                    
+                            font-family: $Fredericka;
+                        }
+                    } 
+                }     
+            }
+                     
+        }
+    }
+
+    
+    
+    .InputNumber{
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+
+        &_bloc{
+            display: flex;
+            margin: 0 18px 24px 0;
+            &_text{
+                display: flex;                    
+                width: 175px;
+            }
+
+            .ant-input-number-lg input{
+                height: 57px;
+            }
+            
+            p{
+                width: 160px;
+                margin: 0;                    
+                color: $colorPolice;
+                font-size: 18px;                
+                font-family: $Fredericka;
+            }            
+        }
+        .ant-input-number{
+            width: 55px;
+        }
+
+        .ant-input-number .ant-input-number-input{
+            padding: 0 8px;
+        }
+    }
+}
+
+// ----- cadre button -----
+
+.ant-row{
+    .css-dev-only-do-not-override-sk7ap8{ // class div button
+        margin: 0;
+    }
+    
+    .ant-col-14{ // class centrage div
+        max-width: none;
+        text-align: center;
+    }
+
+}
+.css-dev-only-do-not-override-sk7ap8 .ant-form-item {
+    label{    
+    color: $colorPolice;
+    font-size: 22px;    
+    font-family: $Fredericka;
+    }
+}
+
+.css-dev-only-do-not-override-sk7ap8.ant-form-item .ant-form-item-label{
+    label::after{
+        margin: 0 8px 0 8px;
+    }
+}

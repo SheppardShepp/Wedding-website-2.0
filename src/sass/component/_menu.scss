@@ -28,7 +28,7 @@
             a{
                 text-decoration: none;
                 color: $colorPolice;
-                font-family: $texte;
+                font-family: $titre;
                 font-size: 30px;
                 padding: 0 10px;
                 @media (max-width: 800px) {
@@ -52,7 +52,7 @@
         a{
             text-decoration: none;
             color: $colorPolice;
-            font-family: $texte;
+            font-family: $titre;
             font-size: 30px;
             padding: 0 10px;
             &:hover{

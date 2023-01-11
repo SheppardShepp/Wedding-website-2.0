@@ -7,18 +7,16 @@ function Domaine(props) {
         <div className="bloc-1_text">
           <h2>{props.title}</h2>
           <p>
-            Suite à notre union à la mairie, nous vous accueillerons au domaine
-            de l'Étoile de forges, situer à 15-20 min en voiture de la commune.
-            Celui-ci ce trouve au n°1 Le Mont au Bec, 76440 Longmesnil. Je vous
-            met a disposition le lien du site web ainsi qu'une vue 360° en guise
-            d'apercu.
+            Suite à notre union à la mairie, nous vous accueillerons au domaine de l'Étoile de
+            forges, situer à 15-20 min en voiture de la commune. Celui-ci ce trouve au n°1 Le Mont
+            au Bec, 76440 Longmesnil. Je vous met a disposition le lien du site web ainsi qu'une vue
+            360° en guise d'apercu.
           </p>
           <div>
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://tourismedes4rivieresenbray.com/cuy-saint-fiacre"
-            >
+              href="https://tourismedes4rivieresenbray.com/cuy-saint-fiacre">
               Site web du Domaine de l'Étoile de forges
             </a>
             <div>
@@ -34,8 +32,7 @@ function Domaine(props) {
               href="https://my.matterport.com/show/?m=CfUy4FW9vdu&play=1&lang=fr&hl=2&brand=0&title=0&vr=0"
               target="_blank"
               rel="noreferrer"
-              aria-label="Site vue 360°"
-            >
+              aria-label="Site vue 360°">
               <i className="fa-solid fa-arrows-to-eye"></i>
               <span>Vue 360°</span>
             </a>
@@ -48,7 +45,7 @@ function Domaine(props) {
             className="itinéraire"
             title="Itinéraire au Domaine"
             loading="lazy"
-          ></iframe>
+            samesite="None"></iframe>
         </div>
       </div>
 

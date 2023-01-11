@@ -17,34 +17,36 @@ function Carousel(props) {
 
   return (
     <>
-      <img
-        src={props.pictures[slid]}
-        className="sectionCarousel_size"
-        alt="Aperçue Logement"
-      />
-      <div className="sectionCarousel_backBlack"></div>
-      {props.pictures.length !== 1 && (
-        <>
-          <div className="sectionCarousel_chevron">
-            <FontAwesomeIcon
-              icon={faChevronLeft}
-              onClick={previousSlide}
-              className="chevron"
-            />
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              onClick={nextSlide}
-              className="chevron"
-            />
-          </div>
-          <div className="sectionCarousel_compteur">
-            <p>{props.legend[slid]}</p>
-            <p>
-              {slid + 1}/{props.pictures.length}
-            </p>
-          </div>
-        </>
-      )}
+      <div className="sectionCarousel">
+        <img
+          src={props.pictures[slid]}
+          className="sectionCarousel_size"
+          alt="Aperçue Logement"
+        />
+        <div className="sectionCarousel_backBlack"></div>
+        {props.pictures.length !== 1 && (
+          <>
+            <div className="sectionCarousel_chevron">
+              <FontAwesomeIcon
+                icon={faChevronLeft}
+                onClick={previousSlide}
+                className="chevron"
+              />
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                onClick={nextSlide}
+                className="chevron"
+              />
+            </div>
+            <div className="sectionCarousel_compteur">
+              <p>{props.legend[slid]}</p>
+              <p>
+                {slid + 1}/{props.pictures.length}
+              </p>
+            </div>
+          </>
+        )}
+      </div>
     </>
   );
 }

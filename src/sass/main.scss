@@ -1,7 +1,14 @@
 @import "./utils/mixin.scss";
-
 @import "./utils/variable.scss";
+
 @import "./bases/police.scss";
+@import "./bases/button.scss";
+
+@import "./app";
+@import "./pages/home";
+@import "./pages/found";
+@import "./pages/contact";
+@import "./pages/confirmation";
 
 @import "./component/header";
 @import "./component/footer";
@@ -9,11 +16,5 @@
 @import "./component/banner";
 @import "./component/menu";
 @import "./component/carousel";
-@import "./component/information";
 // @import "./component/slider";
 
-
-@import "./app";
-@import "./pages/home";
-@import "./pages/found";
-@import "./pages/contact";
