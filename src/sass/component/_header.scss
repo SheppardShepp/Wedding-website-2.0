@@ -52,10 +52,9 @@ header{
             height: 175px;
             border-radius: 45%;
             margin: 50px 0 0 -50%;
-            border-bottom: 5px solid $colorTheme;
-            border: 5px solid $colorTheme;
-            border-right: 5px solid $colorTheme;
-            border-left: 5px solid $colorTheme;
+            border-bottom: 3px solid $colorTheme;
+            border-right: 3px solid $colorTheme;
+            border-left: 3px solid $colorTheme;
             background-color: $colorFond;
             @media (max-width: 1080px) {
                 width: 250px;
