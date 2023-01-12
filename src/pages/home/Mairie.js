@@ -1,11 +1,8 @@
 import React from "react";
 
 import MyCarousel from "../../components/Carousel";
-// import Slider from "./Slider";
-// import Slider2 from "./Slider2";
 
 import ImgMairie from "../../data/librairie.json";
-// import Sliders from "../data/librairieSlider.json";
 
 function Mairie() {
   return (
@@ -40,15 +37,6 @@ function Mairie() {
           />
         </div>
       </div>
-
-      {/* <section className="test-carousel">
-        // <Slider2 pictures={ImgMairie.pictures} />
-        <Slider2 />
-      </section> */}
-
-      {/* <div className="lightbox">
-        <Slider datas={Sliders} />
-      </div> */}
       <div className="bloc-2">
         <iframe
           title="Position googleMaps"
