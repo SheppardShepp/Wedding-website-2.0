@@ -34,7 +34,7 @@
 
     &_timer{
         position: absolute;
-        @include flexCenter;
+        justify-content: center;
         height: 500px;
         width: 100%;
         @include flexColonne;
@@ -42,43 +42,64 @@
             height: 300px;
         }
     
-        h1{
-            text-align: center;
+        h2{
             color: $colorFond;
-            font-size: 45px;
+            font-size: 50px;
             font-family: $titre;
+            font-style: italic;
+            font-weight: 700;
+            margin: 0;
+            height: 40%;
+            @media (max-width: 550px) {
+                font-size: 30px;
+            }
+        }       
+    }
+
+    &_domain{
+        position: absolute;
+        justify-content: space-between;
+        height: 500px;
+        width: 100%;
+        @include flexColonne;
+        @media (max-width: 550px){
+            height: 300px;
+        }
+        h2{
+            color: $colorFond;
+            font-size: 50px;
+            font-family: $titre;
+            font-style: italic;
+            font-weight: 700;
+            margin: 0;
+            height: 40%;
+            display: flex;
+            align-items: flex-end;
             @media (max-width: 550px) {
                 font-size: 30px;
             }
         }
 
-        &_text{
-            color: $colorTheme;
-            text-align: center;
-        }
-
-        .button{
-            border-radius: 25px;
-            width: 150px;
-            height: 60px;
-            background-color: $colorFond;
-            text-decoration: none;
-            border: 2px solid $colorTheme;
-            overflow: hidden;
+        &_bloc{
+            height: 35%;
 
             &_text{
-                @include flexCenter;
-                text-align: center;
-                color: $colorPolice;
-                font-family: "Playfair Display";
-                font-size: 18px;
-                font-weight: bold;
-                height: 100%;
-                margin: 0;
-                &:hover{
-                    background-color: $colorThemeHover;
+                color: $colorTheme;
+                text-align: center;                
+                font-family: $titre;
+                font-style: italic;
+                font-weight: 700;
+                font-size: 20px;
+                em{
+                    font-size: 22px;
+                    text-decoration: underline;
                 }
             }
+    
+            .btnConfirm{
+                display: flex;
+                justify-content: center;
+            }  
         }
     }
 }

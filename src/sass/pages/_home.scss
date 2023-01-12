@@ -16,36 +16,78 @@
 .bloc{
     padding: 28px;
     color: $colorPolice;
-    h2, h3{
-        margin: 0 0 0 30px;
+    h3, h4{
+        margin: 0;
         font-family: $EB;
-        font-size: 30px;
+        text-align: center;
+        font-size: 40px;
     }
-    h3{
-        font-size: 25px;
+    h4{
+        margin: 0 0 0 30px;
+        text-align: initial;
+        font-size: 30px;
+        text-decoration: underline $colorTheme;
     }
     p, ul, li{
-        color: black;
+        color: $colorPolice;
         font-size: 20px;
-        font-family: $Fredericka;
+        font-family: $titre;
+        font-style: italic;
+        font-weight: 400;
         list-style-type: '-  ';
     }
-}
-.bloc-1{
-    display: flex;
+    .bloc-1{
+        display: flex;
 
-    &_text{
-        width: 50%;
-        padding: 10px;
+        &_text{
+            width: 50%;
+            padding: 10px;
+        }
+
+        .bloc-1_1{
+            width: 50%;
+            .itinéraire{
+                width: 75%;
+                height: 75%;
+                }
+        }    
     }
-    .bloc-1_1{
-        width: 50%;
-        .itinéraire{
-            width: 75%;
-            height: 75%;
+
+    .bloc-2{
+        display: flex;
+        height: 400px;
+        p{            
+            margin: 20px 0 20px 20px;
+        }
+        
+        .myMaps{
+            width: 50%;
+            height: 100%;
+        }
+    
+        &_text{
+            width: 50%;
+            padding: 10px;
+
+            &_coordonnée{
+                margin: 10px 0;
+                p{
+                    margin: 0 0 0 20px;
+                }
             }
-    }    
+
+            .urlMairie{
+                display: flex;
+                padding-left: 30px;
+            }
+        }
+    }
 }
+
+
+
+
+
 .vue360{
     height: 300px;
     position: relative;
@@ -84,16 +126,6 @@
     }
 }
 
-.bloc-2{
-    display: flex;
-    height: 400px;
-    
-    .myMaps{
-        width: 50%;
-        height: 100%;
-    }
 
-
-}
 
 

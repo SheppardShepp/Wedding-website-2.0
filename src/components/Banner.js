@@ -27,18 +27,22 @@ function Banner(props) {
       <section className="banner">
         <div className={addClass}></div>
         <div className="banner_black"></div>
-        <div className="banner_timer">
-          <h1>{props.title}</h1>
-          <p className="banner_timer_text">
-            Afin de nous organiser avec les prestataires, nous aimerions, que
-            vous nous confirmiez votre présence ainsi que quelques autres
-            informations. <br />
-            Sois par téléphone ou sms, les reseau sociaux ou en cliquant sur le
-            bouton ci-dessous.
-          </p>
-          <Link to="/Confirmation" className="button">
-            <p className="button_text">Confirmation</p>
-          </Link>
+        <div className="banner_domain">
+          <h2>{props.title}</h2>
+          <div className="banner_domain_bloc">
+            <p className="banner_domain_bloc_text">
+              Afin de nous organiser avec les prestataires,{" "}
+              <em>Merci de nous faire votre retour avant le 15 Mars.</em> <br />
+              Sois par téléphone/sms, les reseaux sociaux ou en cliquant sur le bouton ci-dessous.
+            </p>
+            <div className="btnConfirm">
+              <Link
+                to="/Confirmation"
+                className="btnBanner">
+                Confirmation
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     );
@@ -48,7 +52,7 @@ function Banner(props) {
         <div className={addClass}></div>
         <div className="banner_black"></div>
         <div className="banner_timer">
-          <h1>{props.title}</h1>
+          <h2>{props.title}</h2>
         </div>
       </section>
     );

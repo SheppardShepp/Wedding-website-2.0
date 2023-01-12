@@ -10,7 +10,7 @@ function Domaine(props) {
             Suite à notre union à la mairie, nous vous accueillerons au domaine de l'Étoile de
             forges, situer à 15-20 min en voiture de la commune. Celui-ci ce trouve au n°1 Le Mont
             au Bec, 76440 Longmesnil. Je vous met a disposition le lien du site web ainsi qu'une vue
-            360° en guise d'apercu.
+            360° en guise d'aperçu.
           </p>
           <div>
             <a

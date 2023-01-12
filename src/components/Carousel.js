@@ -30,12 +30,12 @@ function Carousel(props) {
               <FontAwesomeIcon
                 icon={faChevronLeft}
                 onClick={previousSlide}
-                className="chevron"
+                className="chevron chev-left"
               />
               <FontAwesomeIcon
                 icon={faChevronRight}
                 onClick={nextSlide}
-                className="chevron"
+                className="chevron chev-right"
               />
             </div>
             <div className="sectionCarousel_compteur">

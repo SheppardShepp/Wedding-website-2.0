@@ -12,7 +12,7 @@ function Mairie() {
     <>
       <div className="bloc-1">
         <div className="bloc-1_text">
-          <h2>La Mairie de Cuy Saint Fiacre</h2>
+          <h3>La Mairie de Cuy Saint Fiacre</h3>
           <p>
             Nous vous donnons donc rendez-vous pour notre passage devant la Mairesse de notre
             commune de Cuy Saint Fiacre au 4 rue Roger Cressent (76220) pour 16h30 le 27 Mai 2023.
@@ -56,8 +56,8 @@ function Mairie() {
           className="myMaps"
           loading="lazy"
           samesite="None"></iframe>
-        <div className="bloc-1_text">
-          <h3>Les accès</h3>
+        <div className="bloc-2_text">
+          <h4>Les accès</h4>
           <p>
             Notre commune ce trouve à 4 km de Gournay en Bray dans la Seine Maritime(76), sur l'axe
             principale Beauvais-Rouen via la RN31.
@@ -67,14 +67,21 @@ function Mairie() {
             débouche les autoroute A13 et A28.
           </p>
 
-          <h3>Coordonée de la mairie</h3>
-
-          <a
-            href="https://tourismedes4rivieresenbray.com/cuy-saint-fiacre"
-            target="_blank"
-            rel="noreferrer">
-            Lien de la mairie
-          </a>
+          <h4>Coordonnées de la mairie</h4>
+          <div className="bloc-2_text_coordonnée">
+            <p>4 rue Roger Cressent 76220 Cuy Saint Fiacre</p>
+            <p>Mail : cuysaintfiacre@wanadoo.fr</p>
+            <p>Téléphone: 02 35 90 14 12</p>
+          </div>
+          <div className="urlMairie">
+            <a
+              href="https://tourismedes4rivieresenbray.com/cuy-saint-fiacre"
+              className="url btn"
+              target="_blank"
+              rel="noreferrer">
+              Lien de la mairie
+            </a>
+          </div>
         </div>
       </div>
     </>

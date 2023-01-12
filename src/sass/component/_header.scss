@@ -17,8 +17,9 @@ header{
         margin: 0;
         width: 45%;
         font-family: $titre;
+        font-style: italic;
+        font-weight: 700;
         font-size: 35px;
-        font-weight: normal;
         @media (max-width: 1080px) {
             @include flexCenter;
             width: 250px;
@@ -49,8 +50,12 @@ header{
             background-repeat: no-repeat;
             width: 400px;
             height: 175px;
-            border-radius: 0 0 45% 45%;
+            border-radius: 45%;
             margin: 50px 0 0 -50%;
+            border-bottom: 5px solid $colorTheme;
+            border: 5px solid $colorTheme;
+            border-right: 5px solid $colorTheme;
+            border-left: 5px solid $colorTheme;
             background-color: $colorFond;
             @media (max-width: 1080px) {
                 width: 250px;

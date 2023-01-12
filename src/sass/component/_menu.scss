@@ -29,6 +29,8 @@
                 text-decoration: none;
                 color: $colorPolice;
                 font-family: $titre;
+                font-style: italic;
+                font-weight: 700;
                 font-size: 30px;
                 padding: 0 10px;
                 @media (max-width: 800px) {
@@ -53,6 +55,8 @@
             text-decoration: none;
             color: $colorPolice;
             font-family: $titre;
+            font-style: italic;
+            font-weight: 700;
             font-size: 30px;
             padding: 0 10px;
             &:hover{

@@ -1,8 +1,26 @@
 // ---------------- button formulaire --------------
 .css-dev-only-do-not-override-sk7ap8.ant-btn.ant-btn-lg{    
-    font-family: $Fredericka;
+    font-family: $titre;
+    font-style: italic;
+    font-weight: 700;
     height: auto;
     font-size: 18px;
     background-color: $colorPolice;
 }
+
+.btn{
+    @include btn;
+    color: #FFFFFF;
+    background-color: #010731;
+    font-size: 15px;
+}
+
+.btnBanner{
+    @include btn;
+    color: #010731;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    
+}
+
 
