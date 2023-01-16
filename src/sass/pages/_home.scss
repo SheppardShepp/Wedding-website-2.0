@@ -168,7 +168,6 @@
         
         .myMaps{
             width: 50%;
-            // height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -200,7 +199,6 @@
 
             .urlMairie{
                 display: flex;
-                margin: 0 0 0 30px;
                 @media (max-width: 1080px) {
                     align-items: center;
                     justify-content: center;
