@@ -19,8 +19,7 @@ function Contact() {
     api[success]({
       message: "Message envoyé",
       description:
-        "Nous avons réceptionner votre message, nous vous répondrons le plus tôt possible.",
-      // duration: 0,
+        "Nous avons réceptionné votre message, nous vous répondrons le plus tôt possible.",
       className: "success",
     });
   };
@@ -28,8 +27,7 @@ function Contact() {
   const notifError = (error) => {
     api[error]({
       message: "Erreur critique",
-      description: "Il y a un probleme avec l'envoie de votre mesage. Veuillez-nous en excuser",
-      // duration: 0,
+      description: "Il y a un problème avec l'envoie de votre message. Veuillez-nous en excuser",
       className: "error",
     });
   };
@@ -68,7 +66,6 @@ function Contact() {
       .then(
         (result) => {
           notifSuccess("success");
-          // notifError("error");
           console.log(result);
           setLoading(false);
           form.resetFields();
@@ -93,8 +90,8 @@ function Contact() {
           <div className="main-contact">
             <div className="main-contact_text">
               <p>
-                Pour toute questions, renseignements ou détails à porter à notre attention, il vous
-                suffit de remplir les champs ci-dessous.
+                Pour toutes questions, renseignements ou détails à porter à notre attention, il vous
+                suffit de remplir les formulaire ci-dessous.
               </p>
             </div>
 
@@ -108,7 +105,7 @@ function Contact() {
                 validateMessages={validateMessages}>
                 <Form.Item
                   name={["user", "from_name"]}
-                  label="Invité"
+                  label="Invité(s)"
                   rules={[
                     {
                       required: true,
@@ -143,9 +140,7 @@ function Contact() {
                   }}>
                   <Button
                     type="primary"
-                    htmlType="submit"
-                    // onClick={openNotification()}
-                  >
+                    htmlType="submit">
                     Submit
                   </Button>
                 </Form.Item>

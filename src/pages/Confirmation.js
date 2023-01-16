@@ -20,7 +20,6 @@ function Confirmation() {
       message: "Message envoyé",
       description:
         "Nous avons réceptionner votre message, nous vous répondrons le plus tôt possible.",
-      // duration: 0,
       className: "success",
     });
   };
@@ -29,7 +28,6 @@ function Confirmation() {
     api[error]({
       message: "Erreur critique",
       description: "Il y a un probleme avec l'envoie de votre mesage. Veuillez-nous en excuser",
-      // duration: 0,
       className: "error",
     });
   };
@@ -68,8 +66,7 @@ function Confirmation() {
       )
       .then(
         (result) => {
-          // notifSuccess("success");
-          notifError("error");
+          notifSuccess("success");
           console.log(result);
           setLoading(false);
           form.resetFields();
@@ -98,10 +95,10 @@ function Confirmation() {
                 de nous confirmer votre présence (ou absence) ainsi que le nombre de participant via
                 ce bref formulaire.
               </p>
-              <p>Si un detail dois nous etre communiquer, noté le dans champs "Obersavtion".</p>
+              <p>Si un détail dois nous être communiqué, noté le dans champs "Observation".</p>
               <p>
-                Pour toutes questions, remarque etc., on est joignable par téléphone, reseau sociaux
-                ou par le menu "Contact" du site.
+                Pour toutes questions, remarque etc., on est joignable par téléphone, réseaux
+                sociaux ou par le menu "Contact" du site.
               </p>
             </div>
             <span className="main-conf_bar"></span>
@@ -149,7 +146,7 @@ function Confirmation() {
                   />
                 </Form.Item>
                 <Form.Item
-                  label="Message (facultative)"
+                  label="Message (facultatif)"
                   name={["user", "Votre message"]}>
                   <TextArea rows={4} />
                 </Form.Item>

@@ -13,7 +13,6 @@ function Home() {
       <Header origin="home" />
       <main>
         <Banner
-          title="Avant le passage à la mairie"
           addClass
           origin="Home"
         />

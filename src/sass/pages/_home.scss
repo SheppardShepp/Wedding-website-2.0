@@ -44,6 +44,14 @@
             padding: 10px;
         }
 
+        &_360{
+            display: flex;
+            .url{
+                height: 40px;
+                text-align: center;
+            }
+        }
+
         .bloc-1_1{
             width: 50%;
             .itinéraire{
@@ -55,7 +63,7 @@
 
     .bloc-2{
         display: flex;
-        height: 400px;
+        height: 450px;
         p{            
             margin: 20px 0 20px 20px;
         }
@@ -78,7 +86,7 @@
 
             .urlMairie{
                 display: flex;
-                padding-left: 30px;
+                margin: 30px 0 0 30px;
             }
         }
     }
@@ -94,10 +102,8 @@
 
     &_img{
         position: absolute;
-
         background: url(../../assets/domaine.jpg);
-        background-size: cover;
-        
+        background-size: cover;        
         width: 300px;
         height: 300px;
         border-radius: 50%;

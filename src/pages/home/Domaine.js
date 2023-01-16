@@ -5,21 +5,22 @@ function Domaine(props) {
     <>
       <div className="bloc-1">
         <div className="bloc-1_text">
-          <h2>{props.title}</h2>
+          <h3>{props.title}</h3>
           <p>
             Suite à notre union à la mairie, nous vous accueillerons au domaine de l'Étoile de
-            forges, situer à 15-20 min en voiture de la commune. Celui-ci ce trouve au n°1 Le Mont
-            au Bec, 76440 Longmesnil. Je vous met a disposition le lien du site web ainsi qu'une vue
+            forges, situé à 15-20 min en voiture de la commune. Celui-ci se trouve au n°1 Le Mont au
+            Bec, 76440 Longmesnil. Je vous mets à disposition le lien du site web ainsi qu'une vue
             360° en guise d'aperçu.
           </p>
-          <div>
+          <div className="bloc-1_360">
             <a
               target="_blank"
               rel="noreferrer"
+              className="btn url"
               href="https://tourismedes4rivieresenbray.com/cuy-saint-fiacre">
               Site web du Domaine de l'Étoile de forges
             </a>
-            <div>
+            {/* <div>
               <div className="vue360">
                 <div className="vue360_img"></div>
                 <div className="vue360_shadow"></div>
@@ -27,15 +28,7 @@ function Domaine(props) {
                   <div className="ombre"></div>
                 </div>
               </div>
-            </div>
-            <a
-              href="https://my.matterport.com/show/?m=CfUy4FW9vdu&play=1&lang=fr&hl=2&brand=0&title=0&vr=0"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Site vue 360°">
-              <i className="fa-solid fa-arrows-to-eye"></i>
-              <span>Vue 360°</span>
-            </a>
+            </div> */}
           </div>
         </div>
 
@@ -45,11 +38,27 @@ function Domaine(props) {
             className="itinéraire"
             title="Itinéraire au Domaine"
             loading="lazy"
-            samesite="None"></iframe>
+            samesite="None:Secure"></iframe>
         </div>
       </div>
 
-      <div className="bloc-2"></div>
+      <div className="bloc-2">
+        <a
+          href="https://my.matterport.com/show/?m=CfUy4FW9vdu&play=1&lang=fr&hl=2&brand=0&title=0&vr=0"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Site vue 360°">
+          <i className="fa-solid fa-arrows-to-eye"></i>
+          <span>Vue 360°</span>
+          <div className="vue360">
+            <div className="vue360_img"></div>
+            <div className="vue360_shadow">Vue 360°</div>
+            <div className="vue360_ombre">
+              <div className="ombre"></div>
+            </div>
+          </div>
+        </a>
+      </div>
     </>
   );
 }

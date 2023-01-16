@@ -43,7 +43,7 @@ function Banner(props) {
                 Merci de nous faire votre retour avant le <em className="number"> 1er</em> Mars.
               </em>
               <br />
-              Sois par téléphone/sms, les reseaux sociaux ou en cliquant sur le bouton ci-dessous.
+              Sois par téléphone/sms, les réseaux sociaux ou en cliquant sur le bouton ci-dessous.
             </p>
           </div>
         </div>
