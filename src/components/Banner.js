@@ -30,14 +30,7 @@ function Banner(props) {
         <div className="banner_domain">
           <h2>{props.title}</h2>
           <div className="banner_domain_bloc">
-            <p className="banner_domain_bloc_text">
-              Afin de nous organiser avec les prestataires,
-              <em>
-                Merci de nous faire votre retour avant le <em className="number"> 1er</em> Mars.
-              </em>
-              <br />
-              Sois par téléphone/sms, les reseaux sociaux ou en cliquant sur le bouton ci-dessous.
-            </p>
+            <h3 className="banner_domain_bloc_title">Confirmer-nous votre présence</h3>
             <div className="btnConfirm">
               <Link
                 to="/Confirmation"
@@ -45,6 +38,13 @@ function Banner(props) {
                 Confirmation
               </Link>
             </div>
+            <p className="banner_domain_bloc_text">
+              <em>
+                Merci de nous faire votre retour avant le <em className="number"> 1er</em> Mars.
+              </em>
+              <br />
+              Sois par téléphone/sms, les reseaux sociaux ou en cliquant sur le bouton ci-dessous.
+            </p>
           </div>
         </div>
       </section>

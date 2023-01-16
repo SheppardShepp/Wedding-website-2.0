@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Input, Spin } from "antd";
+import { Button, Form, Input, Spin, notification } from "antd";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -7,21 +7,31 @@ import Footer from "../components/Footer";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
+  //pour le rest du formumlaire
+  const [form] = Form.useForm();
+
   const [isLoading, setLoading] = useState(false);
-  const sendEmail = (value) => {
-    setLoading(true);
-    emailjs.send("service_jqi8hen", "template_4jqh6a9", value.user, "oNvH5Ri8Svb0ZNqVW").then(
-      (result) => {
-        alert("Votre message a été expedié, nous vous repondrons rapidement");
-        console.log(result.text);
-        setLoading(false);
-      },
-      (error) => {
-        console.log(error.text);
-        setLoading(false);
-        // DES BISOUS!
-      }
-    );
+
+  //pour les notification d'envoie
+  const [api, contextHolder] = notification.useNotification();
+
+  const notifSuccess = (success) => {
+    api[success]({
+      message: "Message envoyé",
+      description:
+        "Nous avons réceptionner votre message, nous vous répondrons le plus tôt possible.",
+      // duration: 0,
+      className: "success",
+    });
+  };
+
+  const notifError = (error) => {
+    api[error]({
+      message: "Erreur critique",
+      description: "Il y a un probleme avec l'envoie de votre mesage. Veuillez-nous en excuser",
+      // duration: 0,
+      className: "error",
+    });
   };
 
   const layout = {
@@ -46,24 +56,51 @@ function Contact() {
   };
   /* eslint-enable no-template-curly-in-string */
 
+  const sendEmail = (value) => {
+    setLoading(true);
+    emailjs
+      .send(
+        process.env.REACT_APP_ACCESS_JS,
+        process.env.REACT_APP_TEMP_CONTACT,
+        value.user,
+        process.env.REACT_APP_ID_USER
+      )
+      .then(
+        (result) => {
+          notifSuccess("success");
+          // notifError("error");
+          console.log(result);
+          setLoading(false);
+          form.resetFields();
+        },
+        (error) => {
+          notifError("error");
+          console.log(error);
+          setLoading(false);
+        }
+      );
+  };
+
   return (
     <>
+      {contextHolder}
       <Header origin="home" />
       <main>
         <div className="space">
           <h2>Formulaire de contact</h2>
         </div>
         <Spin spinning={isLoading}>
-          <div className="main-form">
-            <div className="title_size">
+          <div className="main-contact">
+            <div className="main-contact_text">
               <p>
                 Pour toute questions, renseignements ou détails à porter à notre attention, il vous
                 suffit de remplir les champs ci-dessous.
               </p>
             </div>
 
-            <div className="form-contact">
+            <div className="main-contact_form">
               <Form
+                form={form}
                 {...layout}
                 name="nest-messages"
                 onFinish={sendEmail}
@@ -106,7 +143,9 @@ function Contact() {
                   }}>
                   <Button
                     type="primary"
-                    htmlType="submit">
+                    htmlType="submit"
+                    // onClick={openNotification()}
+                  >
                     Submit
                   </Button>
                 </Form.Item>

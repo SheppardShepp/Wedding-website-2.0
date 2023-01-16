@@ -81,15 +81,27 @@
         }
 
         &_bloc{
-            height: 35%;
+            height: 45%;
+            text-align: center;
+            font-size: 20px;
 
-            &_text{
-                color: $colorTheme;
-                text-align: center;                
+            p, h3{                
                 font-family: $titre;
                 font-style: italic;
                 font-weight: 700;
-                font-size: 20px;
+                margin: 0;
+
+            }
+
+            &_title{
+                font-size: 30px;
+                color: $colorFond;
+                margin: 0;
+            }
+
+            &_text{
+            color: $colorTheme;
+                
                 em{
                     font-size: 22px;
                     border-bottom: 3px solid $colorTheme;
@@ -102,6 +114,7 @@
             .btnConfirm{
                 display: flex;
                 justify-content: center;
+                margin: 20px 0;
             }  
         }
     }

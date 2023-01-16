@@ -14,12 +14,12 @@
             right: -25px;
             display: flex;
             flex-direction: column;
-            text-align: end;
+            align-items: flex-end;
             border: 3px solid $colorTheme;
             background-color: $colorFond;
             border-radius: 10px;
             overflow: hidden;
-
+            
             span{
                 border-bottom: 3px solid $colorTheme;
                 width: 100%;
@@ -33,6 +33,8 @@
                 font-weight: 700;
                 font-size: 30px;
                 padding: 0 10px;
+                width: 90%;
+                text-align: end;
                 @media (max-width: 800px) {
                     font-size: 25px;
                 }

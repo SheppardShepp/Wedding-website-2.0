@@ -1,12 +1,44 @@
-.main-form{
+.main-conf{
     display: flex;
     @media (max-width: 1080px) {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .form-conf{
-        width: 60%;
+    &_text{
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        @media (max-width: 1080px) {
+            width: 85%;
+        }
+
+        p{
+            max-width: 85%;    
+            font-family: $titre;
+            font-style: italic;
+            font-weight: 700;    
+            font-size: 20px;
+            @media (max-width: 550px) {
+                font-size: 17px;
+            }
+        }
+    }
+    
+    &_bar{
+        background-color: $colorTheme;
+        width: 3px;
+        max-height: 90%;
+        @media (max-width: 1080px) {
+            display: none;
+        }
+    }
+    
+    &_form{
+        width: 50%;
         padding: 0 0 0 30px;
         @media (max-width: 1080px) {
             width: 85%;
@@ -15,10 +47,12 @@
         
         //widht bloc label
         .ant-col-8{
-            max-width: 170px;
+            max-width: 165px;
+            height: 60px;
             white-space: initial;
             display: flex;
             flex-direction: row-reverse;
+            align-items: center;
             @media (max-width: 575px){
                 max-width: 100%;                
                 display: initial;

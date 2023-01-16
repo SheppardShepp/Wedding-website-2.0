@@ -1,26 +1,37 @@
 import React, { useState } from "react";
-import { Button, Form, Input, InputNumber, Radio, Spin } from "antd";
+import { Button, Form, Input, InputNumber, Radio, Spin, notification } from "antd";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-
 import emailjs from "@emailjs/browser";
 
 function Confirmation() {
+  const [form] = Form.useForm();
+
   const [isLoading, setLoading] = useState(false);
-  const sendEmail = (value) => {
-    setLoading(true);
-    emailjs.send("service_jqi8hen", "template_0zu4t2t", value.user, "oNvH5Ri8Svb0ZNqVW").then(
-      (result) => {
-        alert("Votre message à été expédié, nous vous répondrons rapidement");
-        console.log(result);
-        setLoading(false);
-      },
-      (error) => {
-        console.log(error.text);
-        setLoading(false);
-      }
-    );
+
+  const { TextArea } = Input;
+
+  //pour les notification d'envoie
+  const [api, contextHolder] = notification.useNotification();
+
+  const notifSuccess = (success) => {
+    api[success]({
+      message: "Message envoyé",
+      description:
+        "Nous avons réceptionner votre message, nous vous répondrons le plus tôt possible.",
+      // duration: 0,
+      className: "success",
+    });
+  };
+
+  const notifError = (error) => {
+    api[error]({
+      message: "Erreur critique",
+      description: "Il y a un probleme avec l'envoie de votre mesage. Veuillez-nous en excuser",
+      // duration: 0,
+      className: "error",
+    });
   };
 
   const layout = {
@@ -45,17 +56,43 @@ function Confirmation() {
   };
   /* eslint-enable no-template-curly-in-string */
 
-  const { TextArea } = Input;
+  const sendEmail = (value) => {
+    setLoading(true);
+    emailjs
+      // .send("service_xl7xbna", "template_0zu4t2t", value.user, "oNvH5Ri8Svb0ZNqVW")
+      .send(
+        process.env.REACT_APP_ACCESS_JS,
+        process.env.REACT_APP_TEMP_CONFIRM,
+        value.user,
+        process.env.REACT_APP_ID_USER
+      )
+      .then(
+        (result) => {
+          // notifSuccess("success");
+          notifError("error");
+          console.log(result);
+          setLoading(false);
+          form.resetFields();
+        },
+        (error) => {
+          notifError("error");
+          console.log(error);
+          setLoading(false);
+        }
+      );
+  };
+
   return (
     <>
+      {contextHolder}
       <Header origin="home" />
       <main>
         <div className="space">
           <h2>Bienvenue sur la page de confirmation</h2>
         </div>
         <Spin spinning={isLoading}>
-          <div className="main-form">
-            <div className="title_size">
+          <div className="main-conf">
+            <div className="main-conf_text">
               <p>
                 Afin de savoir qui va venir, et pouvoir nous organiser avec les prestataires, merci
                 de nous confirmer votre présence (ou absence) ainsi que le nombre de participant via
@@ -63,12 +100,14 @@ function Confirmation() {
               </p>
               <p>Si un detail dois nous etre communiquer, noté le dans champs "Obersavtion".</p>
               <p>
-                Pour toutes questions, remarque etc., on est joigniable par téléphone, reseau
-                sociaux ou par le menu "Contact" du site.
+                Pour toutes questions, remarque etc., on est joignable par téléphone, reseau sociaux
+                ou par le menu "Contact" du site.
               </p>
             </div>
-            <div className="form-conf">
+            <span className="main-conf_bar"></span>
+            <div className="main-conf_form">
               <Form
+                form={form}
                 {...layout}
                 name="nest-messages"
                 onFinish={sendEmail}
@@ -76,7 +115,8 @@ function Confirmation() {
                 validateMessages={validateMessages}>
                 <Form.Item
                   label="Statut"
-                  name={["user", "status"]}>
+                  name={["user", "status"]}
+                  initialValue="Présent">
                   <Radio.Group>
                     <Radio value="Présent"> Présent </Radio>
                     <Radio value="Absent"> Absent </Radio>
@@ -110,7 +150,7 @@ function Confirmation() {
                 </Form.Item>
                 <Form.Item
                   label="Message (facultative)"
-                  name={["user", "message"]}>
+                  name={["user", "Votre message"]}>
                   <TextArea rows={4} />
                 </Form.Item>
                 <Form.Item
