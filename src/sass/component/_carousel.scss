@@ -2,6 +2,9 @@
 .blocCarousel{
     width: 50%;
     @include flexCenter;
+    @media (max-width: 1080px) {
+        width: 100%;
+    }
 }
 
     .sectionCarousel{

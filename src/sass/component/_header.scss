@@ -1,69 +1,78 @@
 header{
     position: relative;
-    @include flexBetween;
+    @include flexCenter;
     padding: 0 28px;
     color: $colorPolice;
     height: 150px;
-    @media (max-width: 1080px) {
-        height: 180px;
-    }
-    @media (max-width: 550px) {
-        height: 90px;
-    }
-    
-    h1{
-        position: relative;
-        z-index: 2;
-        margin: 0;
-        width: 45%;
-        font-family: $titre;
-        font-style: italic;
-        font-weight: 700;
-        font-size: 35px;
         @media (max-width: 1080px) {
-            @include flexCenter;
-            width: 250px;
-            height: 155px;            
+            height: 180px;
         }
         @media (max-width: 550px) {
-            font-size: 25px;            
-            width: 210px;
-        }
-    }
-    
-    .blocIntial{ 
-        position: absolute;
-        left: 50%;
-        top: 1%;
-        z-index: 1;
-        @media (max-width: 1080px) {
-            top: 25%;
-        }
-        @media (max-width: 550px) {
-            top: 20%;
+            height: 110px;
         }
 
-        &_position{
-            background-image: url(../../assets/lettremariage.png);
-            background-size: 70%;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 400px;
-            height: 175px;
-            border-radius: 45%;
-            margin: 50px 0 0 -50%;
-            border-bottom: 3px solid $colorTheme;
-            border-right: 3px solid $colorTheme;
-            border-left: 3px solid $colorTheme;
-            background-color: $colorFond;
+    .headerSize{
+        max-width: 1920px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        h1{
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            width: 45%;
+            font-family: $titre;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 35px;
             @media (max-width: 1080px) {
+                @include flexCenter;
                 width: 250px;
-                height: 155px;
+                height: 155px;            
             }
             @media (max-width: 550px) {
-                width: 130px;
-                height: 50px;
+                font-size: 25px;            
+                width: 210px;
             }
         }
+        
+        .blocIntial{ 
+            position: absolute;
+            left: 50%;
+            top: 1%;
+            z-index: 1;
+            @media (max-width: 1080px) {
+                top: 25%;
+            }
+            @media (max-width: 550px) {
+                top: 20%;
+            }
+    
+            &_position{
+                background-image: url(../../assets/lettremariage.png);
+                background-size: 70%;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 175px;
+                border-radius: 45%;
+                margin: 50px 0 0 -50%;
+                border-bottom: 3px solid $colorTheme;
+                border-right: 3px solid $colorTheme;
+                border-left: 3px solid $colorTheme;
+                background-color: $colorFond;
+                @media (max-width: 1080px) {
+                    width: 250px;
+                    height: 155px;
+                }
+                @media (max-width: 550px) {
+                    width: 130px;
+                margin: 60px 0 0 -50%;
+                height: 50px;
+                }
+            }
+        }    
     }    
+    
 }

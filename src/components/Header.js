@@ -5,18 +5,22 @@ function Header(props) {
   if (props.origin === "home") {
     return (
       <header>
-        <h1>Mariage de Nadège et Damien</h1>
-        <div className="blocIntial">
-          <div className="blocIntial_position"></div>
+        <div className="headerSize">
+          <h1>Mariage de Nadège et Damien</h1>
+          <div className="blocIntial">
+            <div className="blocIntial_position"></div>
+          </div>
+          <Menu />
         </div>
-        <Menu />
       </header>
     );
   } else if (props.origin === "about") {
     return (
       <header>
-        <p>Mariage de Nadège et Damien</p>
-        <Menu />
+        <div className="headerSize">
+          <p>Mariage de Nadège et Damien</p>
+          <Menu />
+        </div>
       </header>
     );
   }
