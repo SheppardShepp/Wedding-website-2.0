@@ -79,16 +79,17 @@
             text-align: center;
             @media (max-width: 550px) {
                 font-size: 24px;
-                height: 20%;
+                height: 30%;
             }
         }
 
         &_bloc{
-            height: 60%;
+            height: 40%;
             text-align: center;
             font-size: 18px;
             @media (max-width: 550px) {
                 font-size: 15px;
+                height: 60%;
             }        
 
             p, h3{                
@@ -119,6 +120,9 @@
                     }
                     .number{
                         font-size: 24px;
+                        @media (max-width: 550px) {
+                            font-size: 17px;
+                        }
                     }
                 }
             }
@@ -128,7 +132,7 @@
                 justify-content: center;
                 margin: 20px 0;
                 @media (max-width: 550px) {
-                    margin: 12px 0;
+                    margin: 15px 0;
                 }
             }
         }
