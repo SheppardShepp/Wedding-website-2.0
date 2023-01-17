@@ -32,7 +32,7 @@ function Home() {
           addClass03
           origin="Separation"
         />
-        <section className="bloc">
+        <section className="bloc testinfo">
           <Info />
         </section>
       </main>

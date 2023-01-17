@@ -1,16 +1,3 @@
-//-------------------- inter section -------------------------
-
-.imgTimer{
-    background-image: url(../../assets/faire-part-anonyme.png);
-}
-
-.imgDomaine{
-    background-image: url(../../assets/domaine.jpg);
-}
-.imgInfo{
-    background-image: url(../../assets/bague.webp);
-}
-
 //-------------------- section mairie -------------------------
 
 .bloc{
@@ -94,7 +81,7 @@
                 
                     &_img{
                         position: absolute;
-                        background: url(../../assets/domaine.jpg);
+                        background: url(../../assets/domaine.webp);
                         background-size: cover;        
                         width: 300px;
                         height: 300px;
@@ -210,11 +197,15 @@
 
 .url{
     text-align: center;
-    width: 200px;
+    width: 220px;
 }
 .btnMargin{
     justify-content: space-evenly;
     @media (max-width: 1080px) {
         flex-direction: column;
     } 
+}
+
+.testinfo{
+    height: 1000px;
 }
