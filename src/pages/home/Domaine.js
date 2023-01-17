@@ -77,7 +77,7 @@ function Domaine(props) {
           </p>
           <p>
             On vous partage également un lien vers la brochure de l'office de tourisme du Pays de
-            qui référencie de la page 96 à 124, tous les hébergements à proximité avec les
+            Bray qui référencie de la page 96 à 124, tous les hébergements à proximité avec les
             coordonnées (hôtels, chambres d'hôtes, gites, campings, etc.).
           </p>
 

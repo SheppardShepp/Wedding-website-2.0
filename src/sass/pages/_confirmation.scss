@@ -54,7 +54,7 @@
             flex-direction: row-reverse;
             align-items: center;
             @media (max-width: 575px){
-                max-width: 100%;                
+                max-width: 70%;                
                 display: initial;
             }           
 
@@ -86,4 +86,19 @@
             }            
         }
     }
+}
+
+.ant-form .ant-form-item{
+    .ant-form-item-label{
+    
+        @media (max-width: 575px){
+            max-width: 70%;
+        }
+    }
+    .ant-form-item-control{
+        @media (max-width: 575px){
+        max-width: 70%;
+    }
+    }
+ 
 }
