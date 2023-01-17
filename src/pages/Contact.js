@@ -58,10 +58,10 @@ function Contact() {
     setLoading(true);
     emailjs
       .send(
-        process.env.REACT_APP_ACCESS_JS,
-        process.env.REACT_APP_TEMP_CONTACT,
+        process.env.REACT_APP_ACCESS_JSDEV,
+        process.env.REACT_APP_TEMP_CONTACTDEV,
         value.user,
-        process.env.REACT_APP_ID_USER
+        process.env.REACT_APP_ID_USERDEV
       )
       .then(
         (result) => {

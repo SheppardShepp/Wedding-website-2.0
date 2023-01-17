@@ -59,10 +59,10 @@ function Confirmation() {
     emailjs
       // .send("service_xl7xbna", "template_0zu4t2t", value.user, "oNvH5Ri8Svb0ZNqVW")
       .send(
-        process.env.REACT_APP_ACCESS_JS,
-        process.env.REACT_APP_TEMP_CONFIRM,
+        process.env.REACT_APP_ACCESS_JSDEV,
+        process.env.REACT_APP_TEMP_CONFIRMDEV,
         value.user,
-        process.env.REACT_APP_ID_USER
+        process.env.REACT_APP_ID_USERDEV
       )
       .then(
         (result) => {
