@@ -54,8 +54,14 @@ function Banner(props) {
       <section className="banner">
         <div className={addClass}></div>
         <div className="banner_black"></div>
-        <div className="banner_timer">
+        <div className="banner_domain">
           <h2>{props.title}</h2>
+          <div className="banner_domain_bloc">
+            <p className="banner_domain_bloc_text">
+              Pour toutes questions nous rappellons que nous sommes à votre écoute par téléphone,
+              réseau social, ou via le menu "contact" du site.
+            </p>
+          </div>
         </div>
       </section>
     );

@@ -4,11 +4,10 @@
     padding: 28px;
     color: $colorPolice;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     @media (max-width: 650px) {
         padding: initial;
-
     }
 
     h3, h4{
@@ -47,6 +46,31 @@
             padding: 10px;
             @media (max-width: 1080px) {
                 width: 95%;
+            }
+
+            &_coordonnée{
+                display: flex;
+                justify-content: space-evenly;
+
+                @media (max-width: 550px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &_text{
+                    p{
+                        margin: 10px;
+                    }
+                }
+
+                &_btn{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .marginText{
+                margin: 0;
             }
         }
 
@@ -161,6 +185,7 @@
             @media (max-width: 1080px) {
                 width: 95%;
             }
+
             iframe{
                 height: 450px;
                 width: 75%;
@@ -195,17 +220,26 @@
     }
 }
 
+.bloc-2-margin{
+    margin-top: 30px;    
+}
+
+.blocbutton{
+    margin-top: 30px;    
+display: flex;
+justify-content: center;
+}
+
 .url{
     text-align: center;
     width: 220px;
+    margin-bottom: 20px
 }
+
 .btnMargin{
     justify-content: space-evenly;
+    margin-top: 30px;
     @media (max-width: 1080px) {
         flex-direction: column;
     } 
-}
-
-.testinfo{
-    height: 1000px;
 }

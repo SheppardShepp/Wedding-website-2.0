@@ -28,7 +28,7 @@ function Home() {
           <Domaine title="Le Domaine de l'Étoile de Forges" />
         </section>
         <Banner
-          title="Infos pratique"
+          title="Infos pratique des festivités"
           addClass03
           origin="Separation"
         />
