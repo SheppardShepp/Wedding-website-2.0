@@ -127,12 +127,13 @@ function Confirmation() {
                       required: true,
                     },
                   ]}>
-                  <Input placeholder="Nom du/des invité(s)" />
+                  <Input placeholder="Nom et Prénom du/des invité(s)" />
                 </Form.Item>
                 <Form.Item
                   label="Nombres d'adultes (10 à 99 ans)"
                   name={["user", "adults"]}>
                   <InputNumber
+                    placeholder="0"
                     min={1}
                     max={10}
                   />
@@ -141,7 +142,9 @@ function Confirmation() {
                   label="Nombres d'enfants (3 à 10 ans)"
                   name={["user", "child"]}>
                   <InputNumber
-                    min={1}
+                    placeholder="0"
+                    defaultValue={0}
+                    min={0}
                     max={10}
                   />
                 </Form.Item>

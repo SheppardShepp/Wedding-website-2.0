@@ -111,7 +111,7 @@ function Contact() {
                       required: true,
                     },
                   ]}>
-                  <Input placeholder="Nom du/des invité(s)" />
+                  <Input placeholder="Nom et Prénom du/des invité(s)" />
                 </Form.Item>
                 <Form.Item
                   name={["user", "phone"]}

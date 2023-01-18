@@ -42,8 +42,7 @@ function Mairie() {
           <iframe
             title="Position googleMaps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25285.122974011963!2d1.6506062229919236!3d49.51135686832444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e723531082cf83%3A0xf89364a5c83342c5!2s76220%20Cuy-Saint-Fiacre!5e1!3m2!1sfr!2sfr!4v1673255918861!5m2!1sfr!2sfr"
-            loading="lazy"
-            samesite="None:Secure"></iframe>
+            loading="lazy"></iframe>
         </div>
 
         <div className="bloc-2_text">

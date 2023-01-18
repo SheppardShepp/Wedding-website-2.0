@@ -4,8 +4,8 @@ function Info() {
   return (
     <>
       <div className="bloc-1">
-        <div className="bloc-1_text bloc-2-margin">
-          <div>
+        <div className="bloc-1_text">
+          <div className="bloc-2-margin">
             <h4>Détails pour les photos</h4>
             <p>
               Une photographe sera présent à la mairie et sur le domaine afin d'immortalisé cette
@@ -31,16 +31,19 @@ function Info() {
           </div>
         </div>
 
-        <div className="bloc-1_text bloc-2-margin">
-          <h4>Détail pour la musique</h4>
-          <p>
-            Nous laissons à disposition les coordonnées du DJ au cas où certain aurai des demande
-            particulière à formuler sans nous prévenir.
-          </p>
-          <p>
-            Il sera présent avec son matériel (ce qui est préférable), s'occupera de la musique la
-            soirée et fera également des animations.
-          </p>
+        <div className="bloc-1_text">
+          <div className="bloc-2-margin">
+            <h4>Détail pour la musique</h4>
+            <p>
+              Nous laissons à disposition les coordonnées du DJ au cas où certain aurai des demande
+              particulière à formuler sans nous prévenir.
+            </p>
+            <p>
+              Il sera présent avec son matériel (ce qui est préférable), s'occupera de la musique la
+              soirée et fera également des animations.
+            </p>
+          </div>
+
           <div className="bloc-1_text_coordonnée">
             <div className="bloc-1_text_coordonnée_text">
               <p>Mail : childreamdj@gmail.com</p>
@@ -58,7 +61,7 @@ function Info() {
           </div>
         </div>
       </div>
-      <div className="bloc-2 bloc-2-margin">
+      <div className="bloc-2">
         <div className="bloc-2_text bloc-2-margin">
           <h4>Détails pour les enfants</h4>
           <p>
