@@ -6,7 +6,7 @@ const Timer1 = () => {
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
 
-  const deadline = "27 may 2023 16:30:00 UTC+1";
+  const deadline = "27 may 2023 16:30:00";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
@@ -24,30 +24,38 @@ const Timer1 = () => {
   }, []);
 
   return (
-    <section className="cadre" role="timer">
+    <section
+      className="cadre"
+      role="timer">
       <div className="cadre_day">
-        <p id="day" className="cadre_day_Number">
+        <p
+          id="day"
+          className="cadre_day_Number">
           {days < 10 ? "0" + days : days}
         </p>
-        <p className="cadre_day_Text">
-          {days < 2 ? "jour restant" : "jours restants"}
-        </p>
+        <p className="cadre_day_Text">{days < 2 ? "jour restant" : "jours restants"}</p>
       </div>
       <div className="cadre_timer">
         <div className="cadre_timer_box">
-          <p id="hour" className="cadre_timer_box_number">
+          <p
+            id="hour"
+            className="cadre_timer_box_number">
             {hours < 10 ? "0" + hours : hours}
           </p>
         </div>
         <p className="cadre_timer_point">:</p>
         <div className="cadre_timer_box">
-          <p id="minute" className="cadre_timer_box_number">
+          <p
+            id="minute"
+            className="cadre_timer_box_number">
             {minutes < 10 ? "0" + minutes : minutes}
           </p>
         </div>
         <p className="cadre_timer_point">:</p>
         <div className="cadre_timer_box">
-          <p id="second" className="cadre_timer_box_number">
+          <p
+            id="second"
+            className="cadre_timer_box_number">
             {seconds < 10 ? "0" + seconds : seconds}
           </p>
         </div>
